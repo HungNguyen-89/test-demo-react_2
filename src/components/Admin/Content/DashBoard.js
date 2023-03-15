@@ -1,6 +1,7 @@
 import "./DashBoard.scss";
 import {
   ResponsiveContainer,
+  ComposedChart,
   BarChart,
   CartesianGrid,
   XAxis,
@@ -35,15 +36,15 @@ const DashBoard = () => {
       const data = [
         {
           name: "Quizzes",
-          Qz: Qz,
+          Quantity: Qz,
         },
         {
           name: "Questions",
-          Qs: Qs,
+          Quantity: Qs,
         },
         {
           name: "Answers",
-          As: As,
+          Quantity: As,
         },
       ];
       setDataChart(data);
@@ -107,7 +108,7 @@ const DashBoard = () => {
         </div>
         <div className="c-right">
           <ResponsiveContainer width="95%" height="100%">
-            <BarChart data={dataChart}>
+            {/* <BarChart data={dataChart}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
               <YAxis />
@@ -116,7 +117,24 @@ const DashBoard = () => {
               <Bar dataKey="Qz" fill="#8884d8" />
               <Bar dataKey="Qs" fill="#82ca9d" />
               <Bar dataKey="As" fill="#fcb12a" />
-            </BarChart>
+            </BarChart> */}
+
+            <ComposedChart data={dataChart}>
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <CartesianGrid strokeDasharray="3 3" />
+              {/* <CartesianGrid stroke="#f5f5f5" />
+              <Area
+                type="monotone"
+                dataKey="amt"
+                fill="#8884d8"
+                stroke="#8884d8"
+              /> */}
+              <Bar dataKey="Quantity" barSize={30} fill="#413ea0" />
+              {/* <Line type="monotone" dataKey="uv" stroke="#ff7300" /> */}
+            </ComposedChart>
           </ResponsiveContainer>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { postRegister } from "../../services/apiServices";
 import { toast } from "react-toastify";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import Languages from "../Header/Languages";
+import { GoHome } from "react-icons/go";
 
 const Register = (props) => {
   const [email, setEmail] = useState("");
@@ -53,9 +54,9 @@ const Register = (props) => {
         <button onClick={() => navigate("/login")}>Log in</button>
         <Languages />
       </div>
-      <div className="title col-4 mx-auto">Hỏi Dân IT &amp; Eric</div>
-      <div className="welcome col-4 mx-auto">Start your journey?</div>
-      <div className="content-form col-4 mx-auto">
+      <div className="title col-3 mx-auto">Nippon Zukan</div>
+      <div className="welcome col-3 mx-auto">Start your journey?</div>
+      <div className="content-form col-3 mx-auto">
         <div className="form-group">
           <label>Email (*)</label>
           <input
@@ -102,13 +103,14 @@ const Register = (props) => {
           </button>
         </div>
         <div className="text-center">
+          <GoHome size={"1.2em"} />
           <span
             className="back"
             onClick={() => {
               navigate("/");
             }}
           >
-            &#60;&#60; Go to Homepage
+            {`  Go to Homepage`}
           </span>
         </div>
       </div>

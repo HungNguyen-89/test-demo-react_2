@@ -8,16 +8,9 @@ import {
   SidebarFooter,
   SidebarContent,
 } from "react-pro-sidebar";
-import {
-  FaTachometerAlt,
-  FaGem,
-  FaList,
-  FaGithub,
-  FaRegLaughWink,
-  FaHeart,
-} from "react-icons/fa";
+import { MdOutlineFeaturedVideo } from "react-icons/md";
 import sidebarBg from "../../assets/bg2.jpg";
-import { DiReact } from "react-icons/di";
+import { RiAdminLine } from "react-icons/ri";
 import { MdDashboard } from "react-icons/md";
 import "./SideBar.scss";
 import { Link, useNavigate } from "react-router-dom";
@@ -47,13 +40,13 @@ const SideBar = (props) => {
               whiteSpace: "nowrap",
             }}
           >
-            <DiReact size={"3em"} color={"00bfff"} />
+            <RiAdminLine size={"2em"} color={"00bfff"} />
             <span
               onClick={() => {
                 navigate("/");
               }}
             >
-              / Hoi Dan IT
+              Nippon Zukan
             </span>
           </div>
         </SidebarHeader>
@@ -66,7 +59,7 @@ const SideBar = (props) => {
             </MenuItem>
           </Menu>
           <Menu iconShape="circle">
-            <SubMenu icon={<FaGem />} title="Features">
+            <SubMenu icon={<MdOutlineFeaturedVideo />} title="Features">
               <MenuItem>
                 Quản lý Users
                 <Link to="/admins/manage-users" />
@@ -92,7 +85,7 @@ const SideBar = (props) => {
             }}
           >
             <a
-              href="https://haryphamdev.github.io/hoidanit-udemy/"
+              href="#"
               target="_blank"
               className="sidebar-btn"
               rel="noopener noreferrer"
@@ -104,7 +97,7 @@ const SideBar = (props) => {
                   overflow: "hidden",
                 }}
               >
-                &#169; Hỏi Dân IT Udemy
+                &#169; Nippon Zukan
               </span>
             </a>
           </div>

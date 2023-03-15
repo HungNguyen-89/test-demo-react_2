@@ -33,6 +33,20 @@ const getUserWithPaginate = (page, limit) => {
   return axios.get(`api/v1/participant?page=${page}&limit=${limit}`);
 };
 
+const putUpdateQuizForAdmin = (id, name, description, difficulty, image) => {
+  const data = new FormData();
+  data.append("id", id);
+  data.append("description", description);
+  data.append("name", name);
+  data.append("difficulty", difficulty);
+  data.append("quizImage", image);
+  return axios.put("api/v1/quiz", data);
+};
+
+const deleteQuizForAdmin = (id) => {
+  return axios.delete(`api/v1/quiz/${id}`);
+};
+
 const postLogin = (userEmail, userPassword) => {
   return axios.post(`api/v1/login`, {
     email: userEmail,
@@ -127,6 +141,8 @@ export {
   putUpdateUser,
   deleteUser,
   getUserWithPaginate,
+  putUpdateQuizForAdmin,
+  deleteQuizForAdmin,
   postLogin,
   postRegister,
   getQuizByUser,

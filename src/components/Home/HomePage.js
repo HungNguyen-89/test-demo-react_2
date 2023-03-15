@@ -10,9 +10,9 @@ const HomePage = (props) => {
 
   return (
     <div className="homepage-container">
-      <video autoPlay muted loop>
+      {/* <video autoPlay muted loop>
         <source src={videoHomepage} type="video/mp4" />
-      </video>
+      </video> */}
       <div className="homepage-content">
         <div className="title-1">{t("homepage.title1")}</div>
         <div className="title-2">{t("homepage.title2")}</div>

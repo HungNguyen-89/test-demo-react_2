@@ -8,6 +8,7 @@ import { logout } from "../../services/apiServices";
 import { toast } from "react-toastify";
 import { doLogOut } from "../../redux/action/userAction";
 import Languages from "./Languages";
+import { GiWhiteBook } from "react-icons/gi";
 
 const Header = () => {
   const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
@@ -35,7 +36,8 @@ const Header = () => {
     <Navbar bg="light" expand="lg">
       <Container>
         <NavLink to="/" className="navbar-brand">
-          Hỏi dân IT
+          <GiWhiteBook size={"1.6em"} />
+          Nippon Zukan
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

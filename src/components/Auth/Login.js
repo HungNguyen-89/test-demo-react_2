@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { doLogin } from "../../redux/action/userAction";
 import { ImSpinner10 } from "react-icons/im";
 import Languages from "../Header/Languages";
+import { GoHome } from "react-icons/go";
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -63,9 +64,9 @@ const Login = (props) => {
         <button onClick={() => navigate("/register")}>Sign up</button>
         <Languages />
       </div>
-      <div className="title col-4 mx-auto">HoiDanIT</div>
-      <div className="welcome col-4 mx-auto">Hello, who's this?</div>
-      <div className="content-form col-4 mx-auto">
+      <div className="title col-3 mx-auto">NIPPON ZUKAN</div>
+      <div className="welcome col-3 mx-auto">Hello, who's this?</div>
+      <div className="content-form col-3 mx-auto">
         <div className="form-group">
           <label>Email</label>
           <input
@@ -97,9 +98,10 @@ const Login = (props) => {
             disabled={isLoading}
           >
             {isLoading === true && <ImSpinner10 className="loader-icon" />}
-            <span>Login to HoiDanIT</span>L
+            <span>Login</span>
           </button>
           <div className="text-center">
+            <GoHome size={"1.2em"} />
             <span
               className="back"
               onClick={() => {
@@ -107,7 +109,7 @@ const Login = (props) => {
               }}
             >
               {" "}
-              &#60; &#60; Go to Homepage
+              {` Go to Homepage`}
             </span>
           </div>
         </div>
